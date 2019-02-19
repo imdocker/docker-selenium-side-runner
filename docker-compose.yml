@@ -2,7 +2,7 @@ version: '3'
 
 services:
   chromedriver:
-    image: robcherry/docker-chromedriver
+    image: quay.io/imdocker1/docker-chromedriver
     privileged: true
     restart: always
     environment:
@@ -11,9 +11,9 @@ services:
     #   - '4444:4444'
 
   selenium-side-runner:
-    image: nixel2007/docker-selenium-side-runner
+    image: quay.io/imdocker1/docker-selenium-side-runner
     # build:
     #   context: .
     volumes:
-      - './sides:/sides'
-      - './out:/root/out'
+      - './sides:/sides:z'
+      - './out:/root/out:z'

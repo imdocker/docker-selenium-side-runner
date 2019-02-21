@@ -9,6 +9,8 @@ services:
       - CHROMEDRIVER_WHITELISTED_IPS=''
     # ports:
     #   - '4444:4444'
+    depends_on:
+      - selenium-side-runner
 
   selenium-side-runner:
     image: quay.io/imdocker1/docker-selenium-side-runner
@@ -16,4 +18,4 @@ services:
     #   context: .
     volumes:
       - './sides:/sides:z'
-      - './out:/root/out:z'
+      - './out:/out:z'

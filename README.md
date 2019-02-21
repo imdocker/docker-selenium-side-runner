@@ -3,7 +3,6 @@
 ## Quick start
 
 * copy your `side`'s in `./sides` directory
-* run `docker-compose up`
+* run `docker-compose up --abort-on-container-exit --exit-code-from selenium-side-runner`
 * get result from console and `./out` directory (in json-format)
-
-![image](https://user-images.githubusercontent.com/1132840/46957276-e8dd6100-d09f-11e8-9dfb-936be42a0b72.png)
+* rm old `docker-compose rm -f`
